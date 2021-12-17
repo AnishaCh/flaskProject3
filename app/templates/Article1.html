@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Index{% endblock %}
 {% block content %}
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +11,131 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: right;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: rgb(227, 228, 236);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+        <style>
+         * {
+             box-sizing: border-box;
+         }
+
+
+
+        footer {
+
+            position: absolute;
+  width: 100%;
+  height: 2.5rem;
+        }
+
+        .footer1 a {
+            float: left;
+            font-size: 16px;
+            color: rgb(19, 2, 2);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .footer2 a {
+            float: right;
+            font-size: 16px;
+            color: rgb(19, 2, 2);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .button {background-color: #008CBA;
+            color: white;
+            border: none;
+            text-align: center;
+            font-size: 16px;
+             padding: 10px 30px;}
     </style>
     <title>Document</title>
-
+</head>
+<body>
+<div class="navbar">
+    <a href="new.html">Home</a>
+    <a href="about.html">About</a>
+    <div class="dropdown">
+        <button class="dropbtn"> Explore Pages
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="invention_of_internet.html">History of Internet</a>
+            <a href="Browser wars.html">Browser Wars</a>
+            <a href="internet_search.html">Internet Search</a>
+            <a href="dotcomBubble.html">dotCOM Bubble</a>
+            <a href="People.html">People</a>
+        </div>
+    </div>
+</div>
 <p> <h1> <b> ARTICLE 1 </b></h1></p>
+<img src="oop1.jpg" alt="OOP" width="460" height="345">
 <p> Object-oriented programming (OOP) is a programming paradigm for structuring programs so that properties and behaviors are clustered into one individual objects. An object could, for instance, represent a person with properties like name, age, and address. Walking, talking, breathing, and running are examples of behaviors. It can also be a message in an email features such as a recipient list, subject, and message, as well as activities like as attaching files and sending. Procedural programming is another common programming paradigm that structures a program. It's similar to a recipe in that it gives you a set of steps to follow in the form of functions and code blocks. in order to accomplish a work consecutively The main lesson is that objects are at the heart of Python's object-oriented programming as in procedural programming, but in the overall structure of the program as in object-oriented programming well.</p>
 <p> Object-oriented programming (OOPs) is a programming paradigm in Python that employs objects and classes. Its goal is to use programming to create real-world concepts like inheritance, polymorphisms, and encapsulation. The primary idea behind OOPs is to combine data and the functions that operate with it into a single unit such that no other parts of the code may access it.
 In comparison to other design patterns, object-oriented programming provides a few advantages. Software maintainability is improved, and development is faster and less expensive. As a result, higher-quality software is produced, which may also be extended with new methods and properties. The learning curve, on the other hand, is steeper. Beginners may find the notion too difficult to grasp. OOP software is slower and utilizes more memory in terms of computation since more lines of code must be written.
@@ -24,11 +146,11 @@ In comparison to other design patterns, object-oriented programming provides a f
 <p> Glossary:</p>
 <p> <b>Factory</b>: A factory is an object in object-oriented programming (OOP) which generates other objects. A factory, in precise terms, is a function or method that returns objects of variable prototypes or classes from a method call that is considered to be "new."
 </p>
-<p> <b>Instantiation</b>: Whenever you instantiate a class, you're creating a replica of it with all the class's variables and methods. In Python, creating a class is simple. To instantiate a class, we simply call it like a function and give the arguments defined by the _init_ method.
+<p> <b>Instantiation</b>: Whenever you instantiate a class, you're creating a replica of it with all of the class's variables and methods. In Python, creating a class is simple. To instantiate a class, we simply call it like a function and give the arguments defined by the _init_ method.
 </p>
 <p> <b>Object</b>: A Class's instance is an Object. A class is comparable to a blueprint, while an instance is a clone of the class that contains actual data. Python is an object-oriented programming language that focuses on objects, rather than functions.
 </p>
-<p> <b>Class</b>: A logical grouping of functions and data is known to as a "class." All the standard features of Object Oriented Programming are accessible in the Python class. In Python, a subclass or heir class can inherit attributes and behavior methods from another class.
+<p> <b>Class</b>: A logical grouping of functions and data is known to as a "class." All of the standard features of Object Oriented Programming are accessible in the Python class. In Python, a subclass or heir class can inherit attributes and behavior methods from another class.
 </p>
 <p> <b>Namespace </b>: A namespace is a set of currently defined symbolic names which also includes information about the item that each name refers to. A namespace can be compared to a dictionary, with the keys being the object names and the values being the objects themselves.
 </p>
@@ -36,7 +158,7 @@ In comparison to other design patterns, object-oriented programming provides a f
 </p>
 <p> <b>Fixture</b>: The steps and data that make up the arrange phase of a test are defined by fixtures. They are functions you define in pytest that serve this purpose. They can also be used to define the act phase of a test, which is a useful technique for creating more complicated tests.
 </p>
-<p> <b>Type hint</b>: Type hinting is a formal technique for indicating the type of value in Python code statically.
+<p> <b>Type hint</b>: Type hinting is a formal technique for indicating the type of a value in Python code statically.
 </p>
 <p> <b>Type cast</b>: Type casting is a technique for converting variables/values declared in one data type to a different data type in order for the code snippet to conduct the action necessary. This feature can be achieved in Python by using constructor functions such as int(), string(), float(), and so on.
 </p>
@@ -50,6 +172,24 @@ In comparison to other design patterns, object-oriented programming provides a f
 </p>
 <p> <b>Method</b>: An object's method is a function that "belongs to" it. (The term "method" is not limited to class instances in Python; other object types can also have methods.) List objects, for example, have methods like append, insert, remove, sort, and so on.</p>
 <p> <b>Property</b>: In various object-oriented programming languages, a property is a type of class member that sits halfway between a field (or data member) and a method in terms of capability.</p>
+<p>  <a href="article2.html"> Article 2 </a> </p>
+<p>  <a href="article3.html"> Article 3 </a> </p>
+<p>  <a href="article4.html"> Article 4 </a> </p>
 
 
+
+<footer>
+    <div class="footer1">
+
+        <a href="https://validator.w3.org/nu/#file"><b>Validator</b> </a>
+        <div class="footer2"> <a href="https://github.com/AnishaCh/TEAMPROJECT1"><b>Anisha</b></a>
+            <a href="https://github.com/AnishaCh/TEAMPROJECT1"><b>Srikar</b></a>
+        </div>
+
+
+    </div>
+</footer>
+
+</body>
+</html>
 {% endblock %}
